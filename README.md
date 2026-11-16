@@ -48,4 +48,4 @@ A macro file with your own PIN stores it as plain text. Don't share it with anyo
 
 If something sounds wrong or doesn't work, open an [issue](https://github.com/shpak1704/sandfly-scripts/issues), ideally with the screen tree attached (SandFly menu: Copy screen tree).
 
-License: Apache 2.0.
+License: [Apache 2.0](LICENSE).
