@@ -19,38 +19,44 @@
         },
         {
           "type": "tap",
-          "label": "1",
-          "timeout": 500
+          "label": "^1([ ,]+\\S{1,5}){0,2}$",
+          "timeout": 500,
+          "regex": true
         },
         {
           "type": "tap",
-          "label": "2",
-          "timeout": 500
+          "label": "^2([ ,]+\\S{1,5}){0,2}$",
+          "timeout": 500,
+          "regex": true
         },
         {
           "type": "tap",
-          "label": "3",
-          "timeout": 500
+          "label": "^3([ ,]+\\S{1,5}){0,2}$",
+          "timeout": 500,
+          "regex": true
         },
         {
           "type": "tap",
-          "label": "4",
-          "timeout": 500
+          "label": "^4([ ,]+\\S{1,5}){0,2}$",
+          "timeout": 500,
+          "regex": true
         },
         {
           "type": "if",
           "condition": [
             {
               "test": "item",
-              "label": "OK",
-              "kind": "clickable"
+              "label": "^(OK|ОК|Готово|Ввести|Ввод|Enter|Done|Підтвердити|Подтвердить)$",
+              "kind": "clickable",
+              "regex": true
             }
           ]
         },
         {
           "type": "tap",
-          "label": "OK",
-          "timeout": 500
+          "label": "^(OK|ОК|Готово|Ввести|Ввод|Enter|Done|Підтвердити|Подтвердить)$",
+          "timeout": 500,
+          "regex": true
         },
         {
           "type": "end_if"
