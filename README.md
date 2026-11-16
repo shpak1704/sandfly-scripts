@@ -6,13 +6,13 @@ Scripts for the [SandFly](https://github.com/aaron-gh/SandFly) screen reader for
 
 **Recommended: add this repository as a script source.** Scripts can then be installed straight from SandFly, and they update automatically.
 
-1. SandFly settings → Apps → Scripts → Script sources → Add source.
+1. SandFly settings > Apps > Scripts > Script sources > Add source.
 2. Enter: `github.com/shpak1704/sandfly-scripts`
 3. Open the source, choose a script and confirm the install.
 
 To get updates without being asked, turn on **Update scripts automatically** on the Scripts screen.
 
-**Or manually:** download a `.lua` file below, then go to Scripts → Import script.
+**Or manually:** download a `.lua` file below, then go to Scripts > Import script.
 
 These scripts aren't signed by SandFly, so the install dialog says **Not signed by SandFly**. That's expected for scripts that don't come from SandFly's author.
 
@@ -31,9 +31,9 @@ Right after the phone restarts, SandFly doesn't load scripts yet, but macros alr
 **On the phone, no computer needed:**
 
 1. Download [auto-pin-macro-example.json](auto-pin-macro-example.json) to the phone.
-2. SandFly settings → Macros → import from file → choose the file.
+2. SandFly settings > Macros > import from file > choose the file.
 3. Open the imported macro **PIN**. It types the example PIN `1234`. Each of its four tap steps looks for a button like `^1([ ,]+\S{1,5}){0,2}$`: change only the digit after `^` to the matching digit of your PIN, and leave the rest as it is. The rest makes sure the macro taps the PIN button `1` and not the clock or a date. For a 6-digit PIN, add two more tap steps the same way, with **Regular expression** turned on.
-4. Assign a gesture to the macro: SandFly settings → Commands → Macros → **PIN**.
+4. Assign a gesture to the macro: SandFly settings > Commands > Macros > **PIN**.
 
 **On a computer with PowerShell 7:** [make-pin-macro.ps1](make-pin-macro.ps1) makes the macro file for you.
 
