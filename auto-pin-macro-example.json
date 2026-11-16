@@ -1,0 +1,76 @@
+{
+  "format": "sandfly-items",
+  "version": 1,
+  "macros": [
+    {
+      "id": "29b63fce-62ca-4d9f-a636-7acffaf89f4a",
+      "name": "PIN",
+      "steps": [
+        {
+          "type": "if",
+          "condition": [
+            {
+              "test": "item",
+              "label": "pinEntry",
+              "kind": "editable",
+              "field": "id"
+            }
+          ]
+        },
+        {
+          "type": "tap",
+          "label": "1",
+          "timeout": 500
+        },
+        {
+          "type": "tap",
+          "label": "2",
+          "timeout": 500
+        },
+        {
+          "type": "tap",
+          "label": "3",
+          "timeout": 500
+        },
+        {
+          "type": "tap",
+          "label": "4",
+          "timeout": 500
+        },
+        {
+          "type": "if",
+          "condition": [
+            {
+              "test": "item",
+              "label": "OK",
+              "kind": "clickable"
+            }
+          ]
+        },
+        {
+          "type": "tap",
+          "label": "OK",
+          "timeout": 500
+        },
+        {
+          "type": "end_if"
+        },
+        {
+          "type": "else"
+        },
+        {
+          "type": "speak_text",
+          "text": "Проведіть двома пальцями вгору, щоб відобразити клавіатуру."
+        },
+        {
+          "type": "end_if"
+        }
+      ],
+      "condition": [
+        {
+          "test": "locked"
+        }
+      ]
+    }
+  ]
+}

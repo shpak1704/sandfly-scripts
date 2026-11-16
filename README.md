@@ -22,6 +22,27 @@ These scripts aren't signed by SandFly, so the install dialog says **Not signed 
 | --- | --- | --- |
 | [Timer and stopwatch](timer-stopwatch.lua) | Any | Countdown timers and stopwatches with spoken alerts: one-gesture start, ready-made presets, pause, several at once. Works with the screen off. |
 | [EasyWay: board number and map](easyway-bort.lua) | EasyWay | Speaks each vehicle's board number; every vehicle on a stop screen reads in two swipes; the map no longer gets in the way. |
+| [Auto PIN](auto-pin.lua) | Lock screen | Enters your PIN on the lock screen from the SandFly menu, or automatically when the lock screen appears. |
+
+### Auto PIN: unlocking right after a restart
+
+Right after the phone restarts, SandFly doesn't load scripts yet, but macros already work. To unlock at that moment, use a macro. There are two ways to get one.
+
+**On the phone, no computer needed:**
+
+1. Download [auto-pin-macro-example.json](auto-pin-macro-example.json) to the phone.
+2. SandFly settings → Macros → import from file → choose the file.
+3. Open the imported macro **PIN**. It types the example PIN `1234`: change the four tap steps labelled `1`, `2`, `3`, `4` to the digits of your PIN. For a 6-digit PIN, add two more tap steps.
+4. Assign a gesture to the macro: SandFly settings → Commands → Macros → **PIN**.
+
+**On a computer with PowerShell 7:** [make-pin-macro.ps1](make-pin-macro.ps1) makes the macro file for you.
+
+1. Put `make-pin-macro.ps1` in any folder, open PowerShell there and run it with your PIN: `pwsh -File make-pin-macro.ps1 123456`
+2. The file `auto-pin-macro.json` appears next to it. Copy it to the phone and import it as above, then assign a gesture to the macro **Ввести PIN-код** (Enter PIN).
+
+If the PIN pad isn't shown yet, either macro asks you to swipe up with two fingers: it can't swipe by itself.
+
+A macro file with your own PIN stores it as plain text. Don't share it with anyone.
 
 ## Feedback
 
